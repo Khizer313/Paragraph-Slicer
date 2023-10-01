@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY OWN LOREM IPSUM</title>
+    <style>
+        body{
+            background-image: url(images/background.png);align-items: center;justify-content: center;
+               padding: 100px;
+        }
+        .CONTAINER{
+            align-content: center;justify-content:center;display: grid;
+            
+        }
+        h4{
+            color: #fff;
+        }
+        label{
+            font-size: 50px;font-weight: 700;color: greenyellow;margin-bottom: 10px;
+        }
+        input{
+            font-weight: 700;
+            height: 50px;
+            outline: none;border: 0;padding: 3px;border-radius: 20px;
+            margin-bottom: 10px;
+
+        }
+        input:hover{
+            border: 2px solid greenyellow;
+        }
+        button{
+            margin-top: 10px;
+            font-weight: 700;
+            height: 50px;
+            width: max-content;justify-self: center;
+            outline: none;border: 0;padding: 10px;border-radius: 20px;cursor: pointer;
+        }
+        button:hover{
+            background: #333;color: #fff;border: 2px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="CONTAINER">
+    <h4 id="heading">Slice any word from this paragraph , just enter number of any word from where you wanna slice and then end your slicing by entering the number of any word </h4>
+
+<label for="">Start Slicing(eg(0,10)):</label>
+ 
+   <input type="text"  placeholder="Enter Number of Word that U wanna slice from"  id="inputNumbersOne" > 
+   <input type="text" placeholder="Enter Number of Word where U wanna end slicing" id="inputNumbersTwo">
+   
+ <button onclick="myFun()">Click Me To Generate</button>
+</div>
+
+<script>
+    
+// var myFun =()=>{
+// var inputNumberOne = document.getElementById("inputNumbersOne").value;
+// console.log(inputNumberOne);
+// }
+var inputNumberOne = document.getElementById("inputNumbersOne");
+ var inputNumberTwo = document.getElementById("inputNumbersTwo");
+ 
+ var myFun =()=>{
+     var text = "Lorem ipsum text generator is always available whenever you wanna get it, you can get it by adding numbers of words";
+     var splitText = text.split(" ");
+
+        if(inputNumberOne.value<=21 && inputNumberTwo.value<=21 ){
+        var sliceText = splitText.slice(inputNumberOne.value , inputNumberTwo.value);
+        document.getElementById("heading").innerHTML=(sliceText.join(" "));
+    }else if(inputNumberOne.value>=21 && inputNumberTwo.value>=21 ){
+
+
+
+    }
+
+
+
+    }
+
+
+//     var text = "Lorem ipsum text generator is always available whenever you wanna get it, you can get it by adding numbers of words";
+// var splitText = text.split(" ");
+// console.log(splitText);
+// var spliceText = splitText.slice(2,4);
+// console.log(spliceText);
+
+
+</script>
+
+</body>
+</html>
